@@ -1,44 +1,28 @@
-import { GoBell, GoCloudDownload, GoCreditCard } from "react-icons/go";
-import Button from "./Button";
+import Accordion from "./components/Accordion";
 
 function App() {
-    const handleClick = () => {
-        console.log('Clicked');
-    }
+	const items = [
+		{
+			id: "1",
+			label: "First label",
+			content:
+				"Some content one.Some content one.Some content one.Some content one.Some content one.Some content one.Some content one",
+		},
+		{
+			id: "2",
+			label: "Second label",
+			content:
+				"Some content two.Some content two.Some content two.Some content two.Some content two",
+		},
+		{
+			id: "3",
+			label: "Third label",
+			content:
+				"Some content three.Some content three.Some content three.Some content three.Some content three",
+		},
+	];
 
-    const handleHover = () => {
-        console.log('Hovered');
-    }
-
-    return (
-			<div>
-				<div>
-					<Button primary rounded outline onClick={handleClick} className='mb-5'>
-						<GoBell />
-						Click me!
-					</Button>
-				</div>
-				<div>
-					<Button secondary outline onMouseEnter={handleHover}>
-						<GoCloudDownload />
-						Byee bye!
-					</Button>
-				</div>
-				<div>
-					<Button success><GoCreditCard /> Click bait!</Button>
-				</div>
-				<div>
-					<Button warning outline>
-						Click him!
-					</Button>
-				</div>
-				<div>
-					<Button danger rounded>
-						Click us!
-					</Button>
-				</div>
-			</div>
-		);
+    return <Accordion items={items}/>;
 }
 
 export default App;
