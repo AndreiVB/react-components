@@ -3,11 +3,11 @@ import Button from "../components/Button";
 
 function ButtonPage() {
 	const handleClick = () => {
-		console.log("Clicked");
+		
 	};
 
 	const handleHover = () => {
-		console.log("Hovered");
+		
 	};
 
 	return (
